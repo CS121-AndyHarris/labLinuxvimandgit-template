@@ -15,7 +15,7 @@ jobs:
 
       - name: Run Python script
         run: |
-          cd utils
+          cd autoGrading
           python3 addAutoGrade.py
         env:
           REPO_NAME: ${{ github.repository }}
