@@ -13,6 +13,7 @@ def updateYML():
     testResults = []
     points = []
 
+    correctDirectory()
     with open("classroom.yml","r") as file:
         lines = file.readlines()
         length = len(lines)
@@ -73,6 +74,16 @@ def containsAutoGrade(lines):
             output = lineNumber
     
     return output
+
+def correctDirectory():
+    """
+    Checks if you're in the correct directory. If not 
+    switches to the right one. 
+    """
+
+    if "autoGrading" in os.getcwd():
+        os.chdir("..")
+        os.chdir(".github/workflows")
 
 
 def main():
