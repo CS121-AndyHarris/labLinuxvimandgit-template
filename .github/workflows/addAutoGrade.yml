@@ -25,9 +25,9 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Commit students.json
+      - name: Commit classroom.yml
         run: |
-          git add canvasData/students.json
+          git add .github/workflows/classroom.yml
           git commit -m "Update classroom.yml with autograding feature" || echo "No changes to commit"
           git push
         env:
